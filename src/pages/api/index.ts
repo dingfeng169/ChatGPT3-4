@@ -110,7 +110,7 @@ export const post: APIRoute = async context => {
 
     const apiKey = randomKey(splitKeys(key))
 
-    if (!apiKey) throw new Error("未填写OpenAI·KEY 或者 KEY 填写错误，点击左下角⚙按钮，在OpenAI·Key 后面方框内输入您的密钥，格式为:sk-xxxxxx。")
+    if (!apiKey) throw new Error("未填写 OpenAPI Key 或者 KEY 填写错误，点击左下角⚙按钮，在OpenAPI Key 后面方框内输入您的密钥，格式为:sk-xxxxxx。")
 
     const tokens = messages.reduce((acc, cur) => {
       const tokens = countTokens(cur.content)
