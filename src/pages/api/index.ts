@@ -112,7 +112,7 @@ export const post: APIRoute = async context => {
 
     const apiKey = randomKey(splitKeys(key))
 
-    if (!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
+    if (!apiKey) throw new Error("请在设置页面输入您的 Open·AI API KEY方可正常使用 点击获取ChatGPT账户(https://thoughts.teambition.com/share/6460f47ec98de800422c4d5e)。")
 
     const tokens = messages.reduce((acc, cur) => {
       const tokens = countTokens(cur.content)
